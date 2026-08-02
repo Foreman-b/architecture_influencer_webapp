@@ -6,7 +6,6 @@ set -o errexit
 pip install --upgrade pip
 pip install -r requirements.txt
 
-
 # Collect static files for production
 python manage.py collectstatic --no-input
 
