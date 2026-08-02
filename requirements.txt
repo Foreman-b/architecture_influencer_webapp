@@ -1,0 +1,23 @@
+# Core Framework & API
+Django
+djangorestframework
+
+# Authentication & Security
+djangorestframework-simplejwt
+django-cors-headers
+
+# API Documentation (Swagger UI)
+drf-spectacular
+
+# Static Files Serving (Production)
+whitenoise
+
+# Database & Environment Configuration
+psycopg2-binary
+python-dotenv
+
+# Image Handling (for ImageFields)
+Pillow
+
+# Production Application Server
+gunicorn
