@@ -19,6 +19,7 @@ SECRET_KEY = 'django-insecure-fr17r&koz2$^9h3ti9o8uccxer%!^ayp^4t*_+wr4cg7y2o(!e
 DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "0.0.0.0", "architecture-influencer.onrender.com", "https://architecture-influencer.onrender.com"]
+CORS_ALLOW_ALL_ORIGINS = True 
 
 
 # Application definition
@@ -32,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'drf_spectacular',
+    'corsheaders',
     'influencer',
 ]
 
@@ -47,6 +49,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
