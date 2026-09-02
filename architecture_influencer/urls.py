@@ -31,5 +31,5 @@ urlpatterns = [
     path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 
     # Versioned API Routes for the Influencer App
-    path('api/v1/', include('influencer.urls', namespace='influencer_v1')),
+    path('', include('influencer.urls', namespace='influencer_v1')),
 ]
