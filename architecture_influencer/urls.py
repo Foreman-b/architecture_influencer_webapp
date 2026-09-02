@@ -26,10 +26,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # OpenAPI 3.0 Schema & Swagger UI
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
-    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+    path('api/schema', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/redoc', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 
     # Versioned API Routes for the Influencer App
-    path('', include('influencer.urls', namespace='influencer_v1')),
+    path('api/v1', include('influencer.urls', namespace='influencer_v1')),
 ]
