@@ -39,10 +39,10 @@ urlpatterns = [
     path('api/redoc', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 
     # SimpleJWT & Custom Auth Endpoints
-    path('auth/register', RegisterView.as_view(), name='auth_register'),
-    path('auth/login', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('auth/token/refresh', TokenRefreshView.as_view(), name='token_refresh'),
-    path('auth/profile', UserProfileView.as_view(), name='auth_profile'),
+    path('api/v1/auth/register', RegisterView.as_view(), name='auth_register'),
+    path('api/v1/auth/login', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/v1/auth/token/refresh', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/v1/auth/profile', UserProfileView.as_view(), name='auth_profile'),
 
     # API ViewSets Routes
     path('api/v1/', include(router.urls)),
